@@ -1,11 +1,12 @@
 .card {
     display: grid;
-    grid-template-columns: 33% 33%;
+    grid-template-columns: 35% 35% 30%;
     grid-template-rows: auto;
     grid-template-areas: 
-    ". . . title"
-    "pic pic . data"
-    "pic pic . data";
+    "pic pic title"
+    "pic pic bod"
+    "pic pic data"
+    "pic pic tag";
     
     
 }
@@ -13,23 +14,40 @@
 .cardImage{
     grid-area: pic;
     img {
-        width: 600px;
-        height: 400px;
+       max-width: 100%;
+        height: auto;
     }
 }
 
 .cardTitle{
     grid-area: title;
+    text-align: center;
+    border: 3px;
 }
 
 .cardBody{
-    grid-area: data;
+    grid-area: bod;
+    text-align: center;
+    border: 3px;
 }
 
 .deets{
     grid-area: data;
+    text-align: center;
+    border: 3px;
 }
 
 .tags{
-    grid-area: data;
+    grid-area: tag;
+    text-align: center;
+    border: 3px;
+    ul{
+        list-style: none;
+    }
 }
+
+
+
+
+
+

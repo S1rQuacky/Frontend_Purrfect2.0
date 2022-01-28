@@ -1,7 +1,11 @@
 //This will be landing page for hosts
-
+import Header from "../../components/header"
 
 export default function Hosts() {
   
-    return <h1>Hosts page</h1>
+    return (
+        <div>
+            <Header />
+        </div>
+    )
 }
