@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Playfair+Display+SC:ital@1&display=swap');
+
+
+.logo{
+    border-bottom: 1px solid rgba(0,0,0,.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px clamp(15px, 3%, 50px);
+    text-align: center;
+    box-shadow: 0px 1px 10px rgba(0,0,0,.5);
+    margin-bottom: 57px;
+    background-color: lightgray;
+    color: black;
+
+    top:0;
+    width: 100%;
+    min-width: 680px;
+    z-index: 10;
+
+    .logo1 {
+        font-size: 75px;
+        width: 15%;
+        font-family: 'Imperial Script', cursive;
+        font-weight: 500;
+        letter-spacing: 3px;
+        
+    }
+
+    .logo2{
+        font-size: 50px;
+        width: 20%;
+        font-family: 'Playfair Display SC', serif;
+        font-weight: 500;
+        letter-spacing: 3px;
+        
+    }
+
+    
+    
+    a{
+        color: #3a609c;
+    }
+}
+
+.addBtn{
+    display: flex;
+    justify-content: center;
+
+    button{
+        font-family: 'Playfair Display SC', serif;
+        background-color: #edebee;
+        border: none;
+        color: #3a609c;
+        font-weight: 600;
+        font-size: medium;
+    
+    }
+   
+}
+
+// .card {
+//     display: grid;
+//     grid-template-areas: "pic pic data";
+//     box-shadow: 0 6px 10px 0;
+//     border-radius:5px;
+//     background-color: black;
+// }
+
+// .cardImage{
+//     grid-area: pic;
+// }
+
+// .cardTitle{
+//     grid-area: data;
+// }
+
+// .cardBody{
+//     grid-area: data;
+// }
+
+// .deets{
+//     grid-area: data;
+// }
+ 

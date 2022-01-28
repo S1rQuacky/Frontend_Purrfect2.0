@@ -1,0 +1,35 @@
+.card {
+    display: grid;
+    grid-template-columns: 33% 33%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". . . title"
+    "pic pic . data"
+    "pic pic . data";
+    
+    
+}
+
+.cardImage{
+    grid-area: pic;
+    img {
+        width: 600px;
+        height: 400px;
+    }
+}
+
+.cardTitle{
+    grid-area: title;
+}
+
+.cardBody{
+    grid-area: data;
+}
+
+.deets{
+    grid-area: data;
+}
+
+.tags{
+    grid-area: data;
+}
