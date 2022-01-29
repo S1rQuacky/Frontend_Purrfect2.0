@@ -3,7 +3,7 @@
 function Location(props) {
     
     return (
-           <div className="card">
+           <div key={props.key} className="card">
                <div className="cardImage">
                     <img src={props.img}></img>
                </div>
