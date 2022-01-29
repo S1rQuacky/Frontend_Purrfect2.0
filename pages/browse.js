@@ -39,7 +39,7 @@ export default function Browse() {
                 {allLocations.length > 0 ?
                     searchIt(allLocations).map((location, index) => {
                         return(
-                            <div className="eachLoc">
+                            <div className="eachLoc"key={index}>
                                 <Location 
                                     key={index} 
                                     className="location-item" 
