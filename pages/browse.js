@@ -3,7 +3,7 @@ import  { useEffect, useState } from "react"
 import Location from "../components/location";
 
 export default function Browse() {
-
+    const [q, setQ] = useState("")
     const [allLocations, setAllLocations] = useState(null)
 
     const URL = "https://the-purrfect-getaway.herokuapp.com/locations/";
@@ -13,16 +13,33 @@ export default function Browse() {
         const data = await response.json()
         setAllLocations(data)
     }
+
+    
+    function searchIt(e){
+        if(q !== ""){
+            const changedData = e.filter(fore)
+            return changedData
+        }else{
+            return e
+        }
+    }
+    function fore(obi){
+        return Object.values(obi).some(selector)
+    }
+    function selector(g){ return g.toString().toLowerCase().indexOf(q.toLowerCase()) > -1}
+
     useEffect(() => getAllLocations(), [])
-
+    console.log(allLocations)
     const loaded = () => {
-        return (
+        return (<>
+            <div className="seachBar">
 
-            <div>
+            </div>
+            <div className="allLoc">
                 {allLocations.length > 0 ?
-                    allLocations.map((location, index) => {
+                    searchIt(allLocations).map((location, index) => {
                         return(
-                            <div>
+                            <div className="eachLoc">
                                 <Location 
                                     key={index} 
                                     className="location-item" 
@@ -36,7 +53,10 @@ export default function Browse() {
                                     description={location.description}
                                     img={location.img}
                                     tag={location.tag} 
-                                    /> 
+                                /> 
+                                <div className="locBtn">
+                                    <button>Make a reservation</button>
+                                </div>
                             </div>
                         )
                     } 
@@ -45,7 +65,7 @@ export default function Browse() {
                 
 
             </div>
-        )
+            </>)
     }
     const loading = () => {
         return <h1>Loading...</h1>

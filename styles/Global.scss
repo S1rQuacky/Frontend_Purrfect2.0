@@ -1,0 +1,280 @@
+// Nav
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Playfair+Display+SC:ital@1&display=swap');
+
+header{
+    .logo{
+        border-bottom: 1px solid rgba(0,0,0,.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px clamp(15px, 3%, 50px);
+        text-align: center;
+        box-shadow: 0px 1px 10px rgba(0,0,0,.5);
+        margin-bottom: 57px;
+        background-color: lightgray;
+        color: black;
+
+        top:0;
+        width: 100%;
+        min-width: 680px;
+        //z-index: 10;
+
+        .logo1 {
+            font-size: 75px;
+            width: 15%;
+            font-family: 'Imperial Script', cursive;
+            font-weight: 500;
+            letter-spacing: 3px;
+            margin-right: 1em;
+            //margin-left: 1em;
+        }
+
+        .logo2{
+            font-size: 50px;
+            width: 20%;
+            font-family: 'Playfair Display SC', serif;
+            font-weight: 500;
+            letter-spacing: 3px;
+            margin-left: 1em;
+            //margin-right: 1em;
+        }
+
+    }
+
+    // .addBtn{
+    //     display: flex;
+    //     justify-content: center;
+
+    //     button{
+    //         font-family: 'Playfair Display SC', serif;
+    //         background-color: #edebee;
+    //         border: none;
+    //         color: #3a609c;
+    //         font-weight: 600;
+    //         font-size: medium;
+        
+    //     }
+    
+    // }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Playfair Display SC', serif;
+        button{
+            margin: 5px;
+        }
+        .granted {
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            button {
+                font-family: 'Playfair Display SC', serif;
+                border: none; 
+                background-color: transparent;
+                box-shadow: 0px 1px 10px rgba(0,0,0,.5);
+            }
+            img{
+                width: 3em;
+                max-height: 3em;
+            }
+        }
+        .unAuth{
+            display: flex;
+            flex-direction: column;
+            button {
+                font-family: 'Playfair Display SC', serif;
+                border: none; 
+                background-color: transparent;
+                box-shadow: 0px 1px 10px rgba(0,0,0,.5);
+            }
+        }
+        
+    }
+ 
+}
+// Home CSS
+.randLoc {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20%;
+    max-width: fit-content;
+    justify-content: center;
+    text-size-adjust: auto;
+    border: 2px solid gray;
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1em;
+        border: solid 1px black;
+        width: auto;
+        min-width: fit-content;
+        height: auto;
+        max-width: fit-content;
+
+        .cardImage{
+            display: flex;
+            max-width: fit-content;
+            justify-content: center;
+            height: auto;
+            margin: auto;
+            
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+        .cardTitle{
+            display: flex;
+            text-align: center;
+            border: 3px;
+            max-width: fit-content;
+            justify-content: center;
+            height: auto;
+            margin: auto;
+            text-size-adjust: auto;
+        }
+        .cardBody{
+            text-align: center;
+            border: 3px;
+            max-width: fit-content;
+            justify-content: center;
+            height: auto;
+            margin: auto;
+            text-size-adjust: auto;
+        }
+        
+        .deets{
+            text-align: center;
+            border: 3px;
+            max-width: fit-content;
+            justify-content: center;
+            height: auto;
+            margin: auto;
+            text-size-adjust: auto;
+        }
+        
+        .tags{
+            text-align: center;
+            border: 3px;
+            max-width: fit-content;
+            justify-content: center;
+            height: auto;
+            margin: auto;
+            text-size-adjust: auto;
+            ul{
+                display: table;
+                margin: 0 auto;
+                justify-content: center;
+                list-style: none;
+                text-size-adjust: auto;
+            }
+        }
+    }    
+}
+
+// Browse CSS
+.allLoc {
+    display: flex;
+    height: 20%;
+    max-height: 20%;
+    max-width: fit-content;
+    border: solid 1px black;
+    .eachLoc {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1em;
+        border: solid 1px black;
+        width: 100%;
+        height: auto;
+        .card{
+            padding: 1em;
+            height: auto;
+            .cardImage {
+                width: fit-content;
+                height: auto;
+                max-width: fit-content;
+                img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .locBtn {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+// User Account
+.userPage{
+    display: flex;
+    flex-direction: row;
+    .userProf{
+        display: flex;
+        flex-direction: row;
+        //justify-content: center;
+        .userInfo{
+            display: flex;
+            flex-direction: column;
+            //justify-content: center;
+            button {
+                font-family: 'Playfair Display SC', serif;
+                border: none; 
+                background-color: transparent;
+                box-shadow: 0px 1px 10px rgba(0,0,0,.5);
+            }
+            img{
+                max-height: 20em;
+            }
+        }
+    }
+    .petProf{
+        display: flex;
+        flex-direction: row;
+        
+        .myPets{
+            display: flex;
+            flex-direction: row;
+            
+            .petData{
+                display: flex;
+                flex-direction: column;
+                border: 1px solid gray;
+                justify-content: space-between;
+                .petPic{
+                    img{
+                        //Cat pic
+                        margin: 1em;
+                        height: 10em;
+                        width: 10em;
+                        max-width: 10em;
+                        max-height: 10em;
+                    }
+                }
+                .petBody{
+                    //pet info
+                }
+                .petUd{
+                    display: flex;
+                    margin-left: 1em;
+                    margin-right: 1em;
+                    justify-content: space-between;
+                    button {
+                        font-family: 'Playfair Display SC', serif;
+                        border: none; 
+                        background-color: transparent;
+                        box-shadow: 0px 1px 10px rgba(0,0,0,.5);
+                    }
+                }
+            }
+        }
+        
+    }
+}
+

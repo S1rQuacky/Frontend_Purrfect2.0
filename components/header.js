@@ -10,19 +10,21 @@ import ImgCarousel from "./carousel"
 function Header(props) {
     const { data: session } = useSession();
     let link = ''
+    let manage = ''
     if(typeof window !== 'undefined'){
         const site = Router.route
         if(site.indexOf('hosts') === -1){
             link = '/sign-up'
+            manage = '/useracct'
         }else{
             link = '/hosts/sign-up'
+            manage = '/hosts/hostacct'
         }
     }
         return (
             <header>
                 <Head>
-                    <title>Purrfect</title>
-                    
+                    <title>Purrfect</title>                    
                 </Head>
                 
                 <div className="logo">
@@ -30,7 +32,7 @@ function Header(props) {
                     <div className="logo2"><Link href="/">Getaway</Link></div>  
                     </div>
                 
-                {/* possibly surround with SessionProvider */}
+                
                 <ImgCarousel />
               
                 <nav className="navbar">
@@ -39,23 +41,26 @@ function Header(props) {
                         <li className="nav-item"><Link href="/browse">Browse</Link></li>
                     </ul>
                     <div className="creds" > 
-                {!session && ( <>
-                    <button onClick={signIn} > Click here to sign in </button> 
-                    <Link href = {link} >
-                        <button> And here to sign up </button>
-                    </Link >
-                    </>)
-                } 
-                {session && ( <>
-                    <div className="granted" >
-                        Welcome {session.user.name}
-                        <img src={session.user.image} alt='User Pic' />
-                        <br />
-                        <button onClick={signOut}> Sign out </button> 
-                    </div> 
-                    </>)
-                }
-            </div>
+                        {!session && ( <div className="unAuth">
+                            <button onClick={signIn} > Click here to sign in </button> 
+                            <Link href = {link} >
+                                <button> And here to sign up </button>
+                            </Link >
+                            </div>)
+                        } 
+                        {session && ( <>
+                            <div className="granted" >
+                                <img src={session.user.image} alt='User Pic' />
+                                Welcome {session.user.name}
+                                <br />
+                                <Link href={manage} >
+                                    <button> Manage my Account </button>
+                                </Link >
+                                <button onClick={signOut}> Sign out </button> 
+                            </div> 
+                            </>)
+                        }
+                    </div>
                 </nav>
                 
             </header>

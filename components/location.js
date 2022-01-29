@@ -1,15 +1,8 @@
-
-import Link from "next/link"
-import Card from 'react-bootstrap'
-
-
+// Location card component
 
 function Location(props) {
     
-
     return (
-        
- 
            <div className="card">
                <div className="cardImage">
                     <img src={props.img}></img>
@@ -21,17 +14,16 @@ function Location(props) {
                    <p>{props.description}</p>
                </div>
                <div className="deets">
-                    {props.street}
-                    {props.city}
-                    {props.state}
-                    {props.zip_code}
-                    {props.phone_number}
+                    {props.street} <br/>
+                    {props.city}&nbsp;
+                    {props.state}&nbsp;
+                    {props.zip_code}<br />
+                    {props.phone_number}<br />
                     {props.email}
                 
                </div>
                <div className="tags">
                <ul>
-                   
                 {props.tag.map((tags, index) => {
                     return <li key={index}>
                         {tags}
@@ -39,13 +31,7 @@ function Location(props) {
                 })}
                </ul>
                </div>
-                
-
            </div>
-            
-            
-            
-        
     )
 }
 
