@@ -3,8 +3,9 @@ import Link from "next/link";
 import Head from "next/head";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Router from "next/router";
+import ImgCarousel from "./carousel"
 
-import Carousel from "./carousel";
+
 
 function Header(props) {
     const { data: session } = useSession();
@@ -30,7 +31,7 @@ function Header(props) {
                     </div>
                 
                 {/* possibly surround with SessionProvider */}
-                <Carousel />
+                <ImgCarousel />
               
                 <nav className="navbar">
                     <ul className="nav-items">
