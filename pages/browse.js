@@ -1,6 +1,7 @@
 //Browse all locations 
 import  { useEffect, useState } from "react"
 import Location from "../components/location";
+import Link from "next/link";
 
 export default function Browse() {
     const [q, setQ] = useState("")
@@ -56,20 +57,26 @@ export default function Browse() {
                                 /> 
                                 <div className="locBtn">
                                     <button>Make a reservation</button>
+                                    
                                 </div>
+                                
                             </div>
                         )
                     } 
                     ) : <h3>Loading...</h3>
                 }
                 
-
+                
             </div>
+            <Link href="/useracct"><button >Home</button></Link>
             </>)
+            
     }
     const loading = () => {
         return <h1>Loading...</h1>
     }
 
     return allLocations ? loaded() : loading()
+    
 }
+
