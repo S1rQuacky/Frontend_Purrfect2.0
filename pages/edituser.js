@@ -56,15 +56,15 @@ export default function EditUser(){
                 <h3>Leave alone any field you don't want to change...</h3>
                 <div className="inputForm">
                     <label htmlFor="first_name">First Name:</label><input onChange={handleChange} type="text" id="first_name" name="first_name" placeholder={user?.first_name} required />
-                    <label htmlFor="last_name">&apos;&apos;Last Name:</label><input onChange={handleChange} type="text" id="last_name" name="last_name" placeholder={user?.last_name} required />
+                    <label htmlFor="last_name">Last Name:</label><input onChange={handleChange} type="text" id="last_name" name="last_name" placeholder={user?.last_name} required />
                 </div>
                 <div className="inputForm">
                     <label htmlFor="email">eMail:</label><input onChange={handleChange} type="text" id="email" name="email" placeholder={user?.email} required />
-                    <label htmlFor="pwd">&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;`Password:</label><input onChange={handleChange} type="password" id="pwd" name="pwd" required />
+                    <label htmlFor="pwd">Password:</label><input onChange={handleChange} type="password" id="pwd" name="pwd" required />
                 </div>
                 <div className="inputForm">
                     <label htmlFor="phone_number">Phone:</label><input onChange={handleChange} type="text" id="phone_number" name="phone_number" placeholder={user?.phone_number} required />
-                    <label htmlFor="img">&apos;&apos;&apos;&apos;&apos;&apos;&apos;Image URL:</label><input onChange={handleChange} type="text" id="img" name="img" placeholder={user?.img} required />
+                    <label htmlFor="img">Image URL:</label><input onChange={handleChange} type="text" id="img" name="img" placeholder={user?.img} required />
  
                 </div>
                 <div className="foot">
