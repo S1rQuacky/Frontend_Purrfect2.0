@@ -277,4 +277,10 @@ header{
         
     }
 }
-
+.carouselImg{
+    display: flex;
+    max-width: fit-content;
+    justify-content: center;
+    height: auto;
+    margin: auto;
+}
