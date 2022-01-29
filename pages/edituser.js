@@ -53,7 +53,7 @@ export default function EditUser(){
     return(<div className="editUsrPage">
         <Header ></Header>
                 <h1>Update Account</h1>
-                <h3>Leave alone any field you don't want to change...</h3>
+                <h3>Leave alone any field you do not want to change...</h3>
                 <div className="inputForm">
                     <label htmlFor="first_name">First Name:</label><input onChange={handleChange} type="text" id="first_name" name="first_name" placeholder={user?.first_name} required />
                     <label htmlFor="last_name">Last Name:</label><input onChange={handleChange} type="text" id="last_name" name="last_name" placeholder={user?.last_name} required />
